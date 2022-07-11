@@ -1,0 +1,58 @@
+
+
+<script type="text/javascript">
+	function test()
+	{
+		document.write("test2");
+	}
+    function showBatteryIcon(){
+            EB.Battery.showIcon(defineIconProperties(), batteryCallback);
+            EB.Battery.batteryStatus({trigger:EB.Battery.BATTERY_TRIGGER_SYSTEM}, batteryCallback);
+            // The batteryStatus() is used to tell the icon when to refresh.
+            // We are leaving this up to the system events by using the BATTERY_TRIGGER_SYSTEM constant.
+        }
+
+    function hideBatteryIcon(){
+            EB.Battery.hideIcon();
+            EB.Battery.stopBatteryStatus();
+        }
+
+    function batteryCallback(params){
+            if(params){     // Most of these methods have callbacks but null 'params' sent.
+                console.log(params);
+            }
+            else
+                console.log("No Params");
+        }
+
+    function defineIconProperties(){
+            var props = {
+                color:  "#66CD00",
+                layout: EB.Battery.BATTERY_LAYOUT_RIGHT,
+                top:        window.innerHeight-30,  
+                 
+                left:   EB.System.screenWidth +90      // Far right of screen, accounting for actual viewable area.
+            }
+            return props;
+        }
+
+    function adjustIcon(){
+            EB.Battery.hideIcon();
+            EB.Battery.showIcon(defineIconProperties(), batteryCallback);
+        }
+
+        // If the screen orientation changes, adjust the battery Icon.
+    EB.ScreenOrientation.setScreenOrientationEvent(adjustIcon);
+
+   /*
+    
+    var lastBarcode = localStorage.getItem("lastScannedBarcode");
+    if (lastBarcode.toString() !== 'null') {
+        document.write("<br><br><hr><center><p class='text'> Last scanned valid barcode: <br>" + lastBarcode + "</p></center><hr>");
+    }
+    */
+</script>
+<script type="text/javascript">showBatteryIcon();</script>
+
+</body>
+</html>

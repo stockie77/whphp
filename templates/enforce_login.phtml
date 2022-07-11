@@ -1,0 +1,14 @@
+<?php
+if ($_SESSION["user_name"]) { ?>
+    <p class="text">CURRENT USER: <?= $_SESSION["user_name"] ?> </p>
+    <?php if (isset($include_startscreen_btn) && $include_startscreen_btn == true) { ?>
+        <form action="../page2.php">
+            <input type="submit" class="input-btn" value="Startscreen">
+        </form>
+    <?php } ?>
+
+
+    <hr>
+<?php } else {
+    header("Location:login.php");
+}

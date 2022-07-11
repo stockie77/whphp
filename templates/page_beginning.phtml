@@ -1,0 +1,17 @@
+<?php
+include('config.php');
+session_start();
+extract($_REQUEST, EXTR_SKIP);
+?>
+
+<html>
+<?php include_once "templates/header.phtml";
+if (isset($include_enable_scanner) && $include_enable_scanner == true) { ?>
+    <body onload="enableScanner()">
+<?php } ?>
+
+<center>
+<h1><?=$page_name ?></h1>
+<?php include_once "templates/enforce_login.phtml" ?>
+
+

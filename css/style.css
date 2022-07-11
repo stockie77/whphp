@@ -1,0 +1,140 @@
+
+body {
+    background-color: #e2ebef;
+}
+
+table {
+    background-color: inherit;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input {
+    font-size:18pt;
+}
+
+input.text-input {
+    width: 250px;
+
+}
+
+.select-wrapper {
+      width: 280px;
+      height: 60px;
+      font-size: 20pt;
+      font-weight: bold;
+    }
+
+
+
+.button {
+    border: 1px solid #000000;
+    background-color: #B50027;
+	color: #ffffff;
+}
+
+.input-btn {
+	width: 280px;
+	height: 120px;
+	font-size: 24px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #436476;
+    color: white;
+    margin: 5px 5px 5px 5px;
+}
+
+.input-btn--wide {
+    width: 275px;
+    height: 100px;
+    font-size: 17px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #436476;
+    color: white;
+    margin: 5px 5px 5px 5px;
+}
+
+.buttonOK {
+    border: 1px solid #000000;
+    background: #1A863A;
+	color: #ffffff;
+}
+
+.input {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+	color: #000000;
+}
+
+.selected {
+    background-color: green;
+}
+
+.centered {
+    margin: auto;
+    width: 50%;
+    /*text-align:center;*/
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.main-title {
+    padding-left: 10px;
+    color: #436476;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.clear-btn {
+    height: 50px;
+    margin-top: -10px;
+    border-radius: 5px;
+}
+
+p.info {
+    font-size: 15pt;
+}
+
+p.text {
+    font-size: 20pt;
+}
+
+p.text-error {
+    font-size: 20pt;
+    color: red;
+    font-weight: bold;
+}
+
+.ms-helper{
+    visibility: hidden;
+}
+
+.autocomplete_container {
+    width: 400px;
+}
+
+label {
+    font-size:20pt;
+}
+
+#image_alignment div {
+    font-size: 20pt;
+}
+
+
+
+
+a:link  {color:#000000; background-color:transparent}
+a:visited {color:#000000; background-color:transparent}
+a:hover   {color:#ff0000; background-color:transparent}
+a:active  {color:#ff0000; background-color:transparent}

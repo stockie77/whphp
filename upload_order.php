@@ -32,7 +32,7 @@ public function main($sql)
 
 
 			foreach ($fields as $field) {
-        			echo $field[1]+$field[2]. '<br>';
+        			echo $field[1].$field[4].$field[7].$field[8].$field[9].$field[14]. '<br>';
 	   		}
 	  	}catch(Exception $e)
    	   	{

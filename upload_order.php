@@ -3,33 +3,65 @@
 <head>
   <meta charset="utf-8">
   <title>Picking List</title>
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-  <script src="/js/bootstrap.bundle.min.js" </script>
-
-
-
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"> </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<h1>Picking List Warehouse</h1>
+</body>
 
-<body>
   <section id="navbar">
-		<div class="container-fluid">
-				  <nav class="navbar navbar-dark navbar-expand-lg">
-						<a class="navbar-brand" href="">WHM</a>
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					          <span class="navbar-toggler-icon"></span>
-					        </button>
-					        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-					          <ul class="navbar-nav ms-auto">
-					            <li class="navbar-item">
-					              <a class="nav-link" href="">Search</a>
-					            </li>
+     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-with-menu bg-light py-0">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-					          </ul>
-					</nav>
-		</div>
+  <a class="navbar-brand mx-auto" id="logo" href="/"><img border="0" src="assets/IEE_logo.png" width="80" height="40" /></a>
 
-	</section>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ml-2">
+      <li class="nav-item">
+        <a class="nav-link nav-search-link" href="/warehouse_batches/search">SEARCH</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-dropdown-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          REPORTS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link dropdown-item font-weight-bold font" href="/warehouse_batches/expire">Expired</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/warehouse_batches/on_stock">On Stock</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/warehouse_batches/inventory">Inventory</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/histories">History</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-dropdown-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          LIST
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link dropdown-item font-weight-bold" href="/warehouse_batches/lot_to_store">Lot to Store</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/warehouse_batches/blocked">Blocked Stock</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/warehouse_batches/empty_location">Empty Location</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-dropdown-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          EXTRAS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link dropdown-item font-weight-bold" href="/admins/auth">Admin</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/exception_list">Exception List</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/wh_to_prod">Request WH to PROD</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/delivery_list">Ordered/Delivered</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/wh_to_sm">List WH to SM</a>
+          <a class="nav-link dropdown-item font-weight-bold" href="/sm_to_wh">List SM to WH</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </section>
 
 <?php
 
@@ -84,5 +116,4 @@ $obj->main($sql);
 ?>
 
 </body>
-
 </html>
